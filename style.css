@@ -1,0 +1,36 @@
+html {
+    background: rgb(255, 249, 249);
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+.tittle {
+    background: linear-gradient(-90deg, rgb(207, 106, 194), #16C0B0);
+    padding: 15px;
+    color: aliceblue;
+    font-weight: 600;
+}
+#app {
+    border: rgb(207, 106, 194);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+    padding-bottom: 30px;
+    margin: 30px;
+}
+.options {
+    background: rgb(199, 199, 199);
+    padding: 10px;
+}
+.pyramid {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 0;
+    color: rgb(207, 106, 194);
+}
+output {
+    font-weight: bolder;
+    font-size: 25px;
+}
+select {
+    font-size: 20px;
+}

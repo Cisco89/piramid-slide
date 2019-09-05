@@ -25,7 +25,7 @@ function pyramidRows(height, symbol) {
     for (var row = 0; row < height; row++) {
 
         var numBricks = row + 2
-        var numSpaces = 20 - row - 1
+        var numSpaces = height - row - 1
 
         var rowStr = "";
         for (var i = 0; i < numSpaces; i++) {

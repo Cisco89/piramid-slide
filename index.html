@@ -2,29 +2,30 @@
 <html>
 <head>
 
+    <title>Pyramid Slide</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
 </head>
 <body>
 
+    <div class="tittle">
+        
+        <h1>Pyramid Slide</h1>
+
+    </div>
+
     <div id="app">
 
-        <div id="tittle">
+        <div class="options">
             
-            <h1>Pyramid Slide</h1>
-
-        </div>
-
-        <div >
-            
-            <label for="brickSymbol">Brick Symbol:</label>
-            <select id="brickSymbol" v-model="symbol" >
+            <label for="brick">Brick Symbol:</label>
+            <select id="brick" v-model="symbol" >
                 <option v-for="symbol in symbols">{{ symbol }}</option>
             </select>
-
-        </div>
-    
-        <div>
-
-            <label for="slide">How high?</label>
+        
+            <!-- did not really want to add the spacing this way, but oh well! -->
+            <label for="slide">&nbsp&nbsp&nbspHow high?</label>
             <input id="slide" 
                 v-model="height"
                 type="range" 
@@ -34,8 +35,11 @@
                 <output id="slideValue">{{ slideValue() }}</output>
 
         </div>
-                
-        <div id="pyramid">
+           
+        </br>
+        </br>
+
+        <div class="pyramid">
                 <p v-for="row in rows" v-html="row" ></p>
             </div>
 
