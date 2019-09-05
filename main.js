@@ -2,14 +2,13 @@ var mario = new Vue({
     el: '#app',
     data: {
             symbols: ['#','@','$','X'],
-            symbol: "#",
+            symbol: '#',
             height: 1,
-        
     },
     computed: {
         rows: function() {
             return pyramidRows(this.height, this.symbol)
-        }
+        },
     },
     methods: {
         slideValue() {
@@ -20,19 +19,19 @@ var mario = new Vue({
 
 function pyramidRows(height, symbol) {
 
-    var rowStrings = []
+    let rowStrings = []
 
-    for (var row = 0; row < height; row++) {
+    for (let row = 0; row < height; row++) {
 
-        var numBricks = row + 2
-        var numSpaces = height - row - 1
+        let numBricks = row + 2
+        let numSpaces = height - row - 1
 
-        var rowStr = "";
-        for (var i = 0; i < numSpaces; i++) {
-            var spaceChar = "&nbsp"
+        let rowStr = "";
+        for (let i = 0; i < numSpaces; i++) {
+            let spaceChar = "&nbsp;"
             rowStr += spaceChar
         }
-        for (var i = 0; i < numBricks; i++) {
+        for (let i = 0; i < numBricks; i++) {
             rowStr += symbol
         }
 
