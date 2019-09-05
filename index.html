@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+
+    <label for="symbol">Brick Symbol:</label>
+    <select id="symbol" >
+        <option>#</option>
+        <option>@</option>
+        <option>X</option>
+        <option>$</option>
+        <option>◘</option>
+        <option>♥</option>
+        <option>█</option>
+        <option>Ω</option>
+    </select>
+
+    <label for="slide">How high?</label>
+    <input id="slide" type="range" min="1" max="20" oninput="createPyramid">
+        <span>Value:{{ value }}</span>
+
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="main.js"></script>   
+
+</body>
+</html>
