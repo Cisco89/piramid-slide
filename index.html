@@ -5,21 +5,41 @@
 </head>
 <body>
 
-    <label for="symbol">Brick Symbol:</label>
-    <select id="symbol" >
-        <option>#</option>
-        <option>@</option>
-        <option>X</option>
-        <option>$</option>
-        <option>◘</option>
-        <option>♥</option>
-        <option>█</option>
-        <option>Ω</option>
-    </select>
+    <div id="app">
 
-    <label for="slide">How high?</label>
-    <input id="slide" type="range" min="1" max="20" oninput="createPyramid">
-        <span>Value:{{ value }}</span>
+        <div id="tittle">
+            
+            <h1>Pyramid Slide</h1>
+
+        </div>
+
+        <div >
+            
+            <label for="brickSymbol">Brick Symbol:</label>
+            <select id="brickSymbol" v-model="symbol" >
+                <option v-for="symbol in symbols">{{ symbol }}</option>
+            </select>
+
+        </div>
+    
+        <div>
+
+            <label for="slide">How high?</label>
+            <input id="slide" 
+                v-model="height"
+                type="range" 
+                min="1" 
+                max="20" >
+
+                <output id="slideValue">{{ slideValue() }}</output>
+
+        </div>
+                
+        <div id="pyramid">
+                <p v-for="row in rows" v-html="row" ></p>
+            </div>
+
+    </div>
 
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
     <script src="main.js"></script>   
